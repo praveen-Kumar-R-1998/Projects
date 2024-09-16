@@ -9,7 +9,7 @@
 		<thead>
 			<tr>
 
-				<th>Name</th>
+				
 				<th>Description</th>
 				<th>Target Date</th>
 				<th>Is Done?</th>
@@ -21,7 +21,6 @@
 		<tbody>
 			<c:forEach items="${todos}" var="todo">
 				<tr>
-					<td>${todo.userName}</td>
 					<td>${todo.description}</td>
 					<td>${todo.date}</td>
 					<td>${todo.done}</td>
