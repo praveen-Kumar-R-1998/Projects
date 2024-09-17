@@ -2,19 +2,31 @@ package com.in28minutes.springboot.myfirstwebapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
+@Entity
 public class ToDo {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@Column
 	private String userName;
 	
 	@Size(min = 5, message = "Description should contain minimum 5 character")
+	@Column
 	private String description;
 	
+	@Column
 	private LocalDate date;
 	
+	@Column
 	private boolean done;
 	
 	
