@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.myfirstwebapp.login;
+package com.springboot.myfirstwebapp.todoapplication.login;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;

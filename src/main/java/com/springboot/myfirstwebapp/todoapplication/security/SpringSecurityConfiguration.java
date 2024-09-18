@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.myfirstwebapp.security;
+package com.springboot.myfirstwebapp.todoapplication.security;
 
 import java.util.function.Function;
 import static org.springframework.security.config.Customizer.withDefaults;
