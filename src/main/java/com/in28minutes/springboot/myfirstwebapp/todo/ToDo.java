@@ -12,21 +12,22 @@ import jakarta.validation.constraints.Size;
 @Entity
 public class ToDo {
 
-	@Id
+	@Id()
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
 	private int id;
 	
-	@Column
+	@Column(name = "USER_NAME")
 	private String userName;
 	
 	@Size(min = 5, message = "Description should contain minimum 5 character")
-	@Column
+	@Column(name = "DESCRIPTION")
 	private String description;
 	
-	@Column
+	@Column(name = "DATE")
 	private LocalDate date;
 	
-	@Column
+	@Column(name = "DONE")
 	private boolean done;
 	
 	

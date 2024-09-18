@@ -17,16 +17,18 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 
-@Controller
+//@Controller
 @SessionAttributes(names = "name")
 public class ToDoController {
 
 	@Autowired
 	private ToDoService service;
 
+
 	@RequestMapping("/list-todos")
 	public String listAllToDOs(ModelMap model) {
 		String userName = getLoggedInUserName(model);
+		System.out.println("The logged name in user is:"+ userName);
 
 		List<ToDo> todos = service.findByUserName(userName);
 		model.addAttribute("todos", todos);
@@ -36,6 +38,8 @@ public class ToDoController {
 	@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
 	public String showNewToDoPage(ModelMap model) {
 		String userName = getLoggedInUserName(model);
+		System.out.println("The logged name in user is:"+ userName);
+
 		ToDo todo = new ToDo(0, userName, "", LocalDate.now().plusYears(1), false);
 		model.put("todo", todo);
 		return "todo";
@@ -49,6 +53,8 @@ public class ToDoController {
 		}
 
 		String userName = getLoggedInUserName(model);
+		System.out.println("The logged name in user is:"+ userName);
+
 		service.addToDo(userName, todo.getDescription(), todo.getDate(), false);
 		return "redirect:/list-todos";
 	}
@@ -74,6 +80,8 @@ public class ToDoController {
 		}
 
 		String userName = getLoggedInUserName(model);
+		System.out.println("The logged name in user is:"+ userName);
+
 		todo.setUserName(userName);
 		service.updateTodo(todo);
 		return "redirect:/list-todos";

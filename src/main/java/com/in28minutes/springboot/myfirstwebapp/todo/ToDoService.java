@@ -17,9 +17,9 @@ public class ToDoService {
 	private static int todosCount = 0;
 
 	static {
-		toDos.add(new ToDo(++todosCount, "in28Minutes", "Learn AWS", LocalDate.now().plusYears(1), false));
-		toDos.add(new ToDo(++todosCount, "in28Minutes", "Learn Azure", LocalDate.now().plusYears(1), false));
-		toDos.add(new ToDo(++todosCount, "in28Minutes", "Learn GC", LocalDate.now().plusYears(1), false));
+		toDos.add(new ToDo(++todosCount, "praveen", "Learn AWS", LocalDate.now().plusYears(1), false));
+		toDos.add(new ToDo(++todosCount, "praveen", "Learn Azure", LocalDate.now().plusYears(1), false));
+		toDos.add(new ToDo(++todosCount, "praveen", "Learn GC", LocalDate.now().plusYears(1), false));
 	}
 
 	public List<ToDo> findByUserName(String Name) {
