@@ -24,10 +24,15 @@
 			<form:errors path="date" cssClass="text-warning"></form:errors>
 		</fieldset>
 
+		<fieldset class="mb-3">
+			<form:label path="done">Done</form:label>
+			<form:checkbox path="done" />
+			<form:errors path="done" cssClass="text-warning"></form:errors>
+		</fieldset>
 
 		<form:input path="id" type="hidden" />
-
-		<form:input path="done" type="hidden" />
+<!-- 
+		<form:input path="done" type="" /> -->
 
 		<input type="submit" class="btn btn-success" />
 
